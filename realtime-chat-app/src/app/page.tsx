@@ -1,11 +1,8 @@
-import Button from '@/components/ui/Button'
-import {db} from '@/lib/db'
+"use client"
 
-export default async function Home() {
-  await db.set('hello','super') // it sets the key and value under Data Browser
-  return(
-    <div>
-      <Button variant='ghost'>Hello</Button>
-    </div>
-  )
+import Button from '@/components/ui/Button'
+import { signOut } from 'next-auth/react'
+
+export default function Home() {
+  return <Button onClick={() => signOut()}>Sign out</Button>
 }

@@ -1,7 +1,7 @@
 "use client"
 import { FC, useState } from "react";
 import Button from "./Button";
-import { addFriendValidator } from "@/lib/add-friend";
+import { addFriendValidator } from "@/lib/validations/add-friend";
 import axios, { AxiosError } from "axios";
 import { set, z } from "zod";
 import { useForm } from "react-hook-form";

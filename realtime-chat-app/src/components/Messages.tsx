@@ -3,6 +3,7 @@
 import { cn } from '@/lib/utils'
 import { Message } from '@/lib/validations/message'
 import Image from 'next/image'
+import { format } from 'date-fns'
 import { FC, useEffect, useRef, useState } from 'react'
 
 interface MessagesProps {
@@ -18,6 +19,10 @@ const Messages: FC<MessagesProps> = ({
 
 
   const scrollDownRef = useRef<HTMLDivElement | null>(null)
+
+  const formatTimeStamp = (timestamp: number) => {
+    return format(timestamp, 'HH:mm')
+  }
 
   return (
     <div
@@ -58,11 +63,11 @@ const Messages: FC<MessagesProps> = ({
                   })}>
                   {message.text}{' '}
                   <span className='ml-2 text-xs text-gray-400'>
-                    {message.timestamp}
+                    {formatTimeStamp(message.timestamp)}
                   </span>
                 </span>
               </div>
-              
+
             </div>
           </div>
         )

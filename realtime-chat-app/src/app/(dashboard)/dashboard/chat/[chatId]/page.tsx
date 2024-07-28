@@ -80,7 +80,7 @@ const page = async ({ params }: PageProps) => {
 
   return (
     <div className='flex-1 justify-between flex flex-col h-full max-h-[calc(100vh-6rem)]'>
-      <div className='flex sm:items-center justify-between py-3 border-b-2 border-gray-200'>
+      <div className='flex sm:items-center justify-between py-3 border-b-2 border-gray-200 m-4 -mt-8 mb-2'>
         <div className='relative flex items-center space-x-4'>
           <div className='relative'>
             <div className='relative w-8 sm:w-12 h-8 sm:h-12'>
@@ -106,7 +106,7 @@ const page = async ({ params }: PageProps) => {
         </div>
       </div>
 
-      <Messages sessionId={session.user.id} initialMessages={initialMessages} sessionImg={session.user.image} chatPartner={chatPartner}/>
+      <Messages chatId={chatId} sessionId={session.user.id} initialMessages={initialMessages} sessionImg={session.user.image} chatPartner={chatPartner}/>
       <ChatInput chatId={chatId} chatPartner={chatPartner}/>
     </div>
   )

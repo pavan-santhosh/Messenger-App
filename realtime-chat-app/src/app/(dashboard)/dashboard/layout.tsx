@@ -1,4 +1,4 @@
-import { Icon, Icons } from '@/components/icons'
+import { Icon, Icons } from '@/components/Icons'
 import { authOptions } from '@/lib/auth'
 import Link from 'next/link'
 import { getServerSession } from 'next-auth'
@@ -110,7 +110,9 @@ const Layout: FC<LayoutProps> = async ({children} : LayoutProps) => {
                     </ul>
                 </nav>
             </div>
-            {children}
+            <aside className='max-h-screen container py-16 md:py-12 w-full'>
+                {children}
+            </aside>
         </div>
     ) 
 }

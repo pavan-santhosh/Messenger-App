@@ -1,9 +1,5 @@
 import AddFriendButton from "@/components/ui/AddFriendButton";
 import { FC } from "react";
-
-interface pageProps {
-    
-}
  
 const page : FC = () => {
     return (

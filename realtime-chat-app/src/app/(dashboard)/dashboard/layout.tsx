@@ -10,7 +10,7 @@ import FriendRequestSidebarOptions from '@/components/FriendRequestsSidebarOptio
 import { fetchRedis } from '@/helpers/redis'
 import { getFriendsByUserId } from '@/helpers/get-friends-by-user-id'
 import SidebarChatList from '@/components/SidebarChatList'
-//import MobileChatLayout from '@/components/MobileChatLayout'
+import MobileChatLayout from '@/components/MobileChatLayout'
 import { SidebarOption } from '@/types/typings'
 
 interface LayoutProps {
@@ -49,12 +49,12 @@ const Layout = async ({ children }: LayoutProps) => {
   return (
     <div className='w-full flex h-screen'>
       <div className='md:hidden'>
-        {/* <MobileChatLayout
+        <MobileChatLayout
           friends={friends}
           session={session}
           sidebarOptions={sidebarOptions}
           unseenRequestCount={unseenRequestCount}
-        /> */}
+        />
       </div>
 
       <div className='hidden md:flex h-full w-full max-w-xs grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6'>
